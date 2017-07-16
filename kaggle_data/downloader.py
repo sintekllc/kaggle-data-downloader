@@ -118,7 +118,8 @@ class KaggleDataDownloader:
                     'accepted the competition\'s rules on the kaggle website?'.format(local_filename)
                 )
                 raise Exception('{}\n'.format(warning))
-            os.makedirs(os.path.dirname(local_filename), exist_ok=True)
+            #os.makedirs(os.path.dirname(local_filename), exist_ok=True)
+            os.makedirs(os.path.dirname(local_filename))
             with open(local_filename, 'ab') as f:
                 for chunk in stream.iter_content(chunk_size=1024):
                     if chunk:  # filter out keep-alive new chunks
