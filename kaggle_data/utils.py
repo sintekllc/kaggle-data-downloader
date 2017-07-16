@@ -36,7 +36,8 @@ def extract_7_zip(file_path, destination_path):
     command = ['7za', 'x', file_path, '-o' + destination_path, '-aoa']
 
     print("Extracting {} to {} ...".format(file_path, destination_path))
-    subprocess.run(command)
+    #subprocess.run(command)
+    subprocess.call(command)
     print("Extraction finished")
 
 
